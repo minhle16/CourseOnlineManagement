@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Define -->
+	<definition name="base.definition" template="/WEB-INF/common/classic.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/common/header.jsp" />
+		<put-attribute name="banner" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/common/footer.jsp" />
+	</definition>
+	
+	<definition name="homePage" extends="base.definition">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="banner" value="/WEB-INF/common/banner.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/index.jsp" />
+	</definition>
+	
+	<definition name="productListPage" extends="base.definition">
+		<put-attribute name="title" value="Product List" />
+		<put-attribute name="banner" value="/WEB-INF/common/banner.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/product.jsp" />
+	</definition>
+	
+	<definition name="base1.definition" template="/WEB-INF/common/other/classic1.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="header" value="/WEB-INF/common/other/header1.jsp" />
+		<put-attribute name="banner" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/common/footer.jsp" />
+	</definition>
+	
+	<definition name="aboutPage" extends="base1.definition">
+		<put-attribute name="title" value="About Page" />
+		<put-attribute name="content" value="about-page" />
+		<put-attribute name="banner" value="/WEB-INF/common/other/about.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/about.jsp" />
+	</definition>
+	
+	<definition name="blogPage" extends="base1.definition">
+		<put-attribute name="title" value="Blog Page" />
+		<put-attribute name="content" value="blog-page" />
+		<put-attribute name="banner" value="/WEB-INF/common/other/blog.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/blog.jsp" />
+	</definition>
+	
+	<definition name="contactPage" extends="base1.definition">
+		<put-attribute name="title" value="Contact Page" />
+		<put-attribute name="content" value="contact-page" />
+		<put-attribute name="banner" value="/WEB-INF/common/other/contact.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/contact.jsp" />
+	</definition>
+	
+	<definition name="coursesPage" extends="base1.definition">
+		<put-attribute name="title" value="Courses Page" />
+		<put-attribute name="content" value="courses-page" />
+		<put-attribute name="banner" value="/WEB-INF/common/other/courses.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/courses.jsp" />
+	</definition>
+	
+	<definition name="singlePage" extends="base1.definition">
+		<put-attribute name="title" value="Single Page" />
+		<put-attribute name="content" value="single-courses-page" />
+		<put-attribute name="banner" value="/WEB-INF/common/other/single-courses.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/single-courses.jsp" />
+	</definition>
+
+	<!-- -ADMIN START -->
+	<definition name="baseadmin.definition" template="/WEB-INF/common/classicAdmin.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="sidebar" value="/WEB-INF/common/sidebarAdmin.jsp" />
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="homeAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Home Admin Page" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/dashboard.jsp" />
+	</definition>
+	
+	<definition name="productListAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Product List - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/productList.jsp" />
+	</definition>
+	
+	<definition name="editProductAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Edit Product - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/editProduct.jsp" />
+	</definition>
+	
+	<definition name="createProductAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Create Product - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/createProduct.jsp" />
+	</definition>
+	
+	<definition name="categoryListAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Category List - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/category/categoryList.jsp" />
+	</definition>
+	
+	<definition name="createCategoryAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Create Category - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/category/createCategory.jsp" />
+	</definition>
+	
+	<definition name="editCategoryAdminPage" extends="baseadmin.definition">
+		<put-attribute name="title" value="Edit Category - Admin" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/category/editCategory.jsp" />
+	</definition>
+	<!-- -ADMIN END -->
+	
+</tiles-definitions>
